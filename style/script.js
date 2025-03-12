@@ -21,7 +21,7 @@ submitBtn.addEventListener("click", () => {
     colorPicker.value = selectedColor;
 });
 
-cookieBtn.addEventListener("click", () => {
+window.onload = () => {
     firstText.value = getCookie("firstName") || "";
     lastText.value = getCookie("lastName") || "";
     selectedColor = getCookie("favColor") || "#ffffff";
@@ -29,7 +29,7 @@ cookieBtn.addEventListener("click", () => {
     colorPicker.value = selectedColor;
     document.getElementById("greeting").innerText = " Grettings " + firstText.value + " " + lastText.value + " hope you have a good day!";
 
-});
+};
 delBtn.addEventListener("click", () =>{
     deleteCookie("firstName");
     deleteCookie("lastName");
